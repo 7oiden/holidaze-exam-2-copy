@@ -1,0 +1,78 @@
+$sans-serif-headings: "soleil",
+tahoma,
+sans-serif;
+$serif-headings: "ff-tisa-web-pro",
+georgia,
+serif;
+$body-text: "ff-tisa-sans-web-pro",
+arial,
+sans-serif;
+$button-text: "sofia-pro-soft",
+verdana,
+sans-serif;
+$navbar-links: "sofia-pro";
+$input-text: "open sans";
+
+$colors: (
+    primaryCol: #cc4a45,
+    secondaryCol: #084c61,
+    adminCol: #25828F,
+    linkCol: #053D5A,
+    secondaryBtn: #353535,
+    primaryBg: #ffffff,
+    secondaryBg: #f7f7f7,
+    semiTransparentBg: #ffffffbf,
+    footerBg: #353535,
+    textDark: #222222,
+    textLight: #ffffff,
+    textFooter: #f0f0f0,
+    textGray: #707070,
+    headingFooter: #cbc278,
+    hoverCol: #0744571A,
+    dividers: #ced4da,
+    subtleGray: #ebebeb,
+    dangerCol: #dc3545,
+    warningCol: #ffc107,
+    successCol: #198754,
+);
+
+@function getColor($color) {
+    @return map-get($colors, $color);
+}
+
+$breakpoints: (
+    xsmall: 420px,
+    small: 576px,
+    medium: 768px,
+    large: 992px,
+    xlarge: 1200px,
+    xxlarge: 1400px,
+    xxxlarge: 1600px,
+);
+
+@function getBreakpoint($breakpoint) {
+    @return map-get($breakpoints, $breakpoint);
+}
+
+$fontSizes: (
+    mainMaxSize: 2.5rem,
+    titleSmall: 1.25rem,
+    titleMedium: 1.5rem,
+    titleLarge: 1.75rem,
+    carouselSmall: 1.5rem,
+    carouselLarge: 1.75rem,
+    prodCardTitle: 1.125rem,
+    catCardTitleSmall: 1.25rem,
+    catCardTitleMedium: 1.375rem,
+    catCardTitleLarge: 1.5rem,
+    modalTitleSmall: 1.375rem,
+    modalTitleLarge: 1.5rem,
+    reviewFormSmall: 1.25rem,
+    reviewFormLarge: 1.5rem,
+    buttonSmall: 1.125rem,
+    buttonLarge: 1.25rem,
+);
+
+@function getSize($fontSize) {
+    @return map-get($fontSizes, $fontSize);
+}

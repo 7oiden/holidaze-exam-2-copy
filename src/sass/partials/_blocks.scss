@@ -1,0 +1,90 @@
+.info-block {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 0.25rem;
+
+    &__text {
+        @extend .base-margin;
+        color: getColor(textDark);
+    
+        &--bold {
+            font-weight: bold;
+        }
+
+        &--gray {
+            color: getColor(textGray);
+        }
+
+        &--green {
+            color: getColor(secondaryCol);
+        }
+    }
+}
+
+.customer {
+    &__comment {
+        padding-top: 0.5rem; 
+    }
+
+    &__header {
+        display: flex;
+        gap: 1rem;
+    }
+    
+    &__image {
+        border-radius: 50%;
+        display: block;
+        width: 50px;
+        height: 50px;
+    }
+    
+    &__name {
+        @extend .base-margin;
+        font-family: $sans-serif-headings;
+        font-weight: 700;
+        font-size: 1.125rem;
+        color: getColor(textDark)
+    }
+    
+    &__date {
+        @extend .base-margin;
+        color: getColor(textGray);
+    }
+    
+    &__icons {
+        display: flex;
+        margin-bottom: 1rem;
+        margin-top: 0.25rem;
+    }
+    
+    &__star-icon {
+        width: 1.25rem;
+    
+        path {
+            fill: getColor(primaryCol)
+        }
+    }
+    
+    &__comment {
+        @extend .base-margin;
+        color: getColor(textGray)
+    }
+}
+
+.customer-carousel {
+    &__comment {
+        height: 200px;
+        overflow: clip;
+        padding-top: 0.5rem;
+    
+        @media (min-width: getBreakpoint(small)) {
+            height: 150px;
+        }
+    
+        @media (min-width: getBreakpoint(medium)) {
+            height: 270px;
+        }
+    }
+
+}

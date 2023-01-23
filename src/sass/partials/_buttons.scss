@@ -1,0 +1,108 @@
+.btn-primary {
+    font-family: $button-text;
+    text-decoration: none;
+    display: inline-block;
+    background-color: getColor(primaryCol);
+    color: getColor(textLight);
+    width: auto;
+    font-size: getSize(buttonSmall);
+    border: none;
+    border-radius: 100px;
+    padding: 0.5rem 2rem;
+    transition: opacity 0.3s ease;
+
+    @media (min-width: getBreakpoint(large)) {
+        font-size: getSize(buttonLarge);
+    }
+
+    &:hover {
+        opacity: 0.75;
+        background-color: getColor(primaryCol);
+        color: getColor(textLight);
+    }
+
+    &:focus {
+        background-color: getColor(primaryCol);
+    }
+}
+
+.admin-button {
+    background-color: getColor(adminCol);
+    color: getColor(textLight);
+    margin-top: 0.5rem;
+
+    &:hover {
+        background-color: getColor(adminCol);
+        color: getColor(textLight);
+    }
+    
+    &:focus {
+        background-color: getColor(adminCol);
+    }
+}
+
+.btn-secondary {
+    font-family: $button-text;
+    text-decoration: none;
+    background-color: getColor(secondaryBtn);
+    color: getColor(textLight);
+    font-size: 1rem;
+    border-radius: 25px;
+    border: none;
+    padding: 0.375rem 1.5rem;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.7;
+        background-color: getColor(secondaryBtn);
+    }
+    
+    &:focus {
+        background-color: getColor(secondaryBtn);
+        opacity: 1;
+        outline: none;
+    }
+}
+
+.form-button {
+    margin-top: 1.5rem;
+}
+
+.btn-close {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.log-button {
+    font-size: 1rem;
+    width: 160px;
+    padding: 0.375rem 1.5rem;
+
+    @media (min-width: getBreakpoint(large)) {
+        width: 180px;
+        font-size: 1.125rem;
+    }
+}
+
+.newsletter-button {
+    color: getColor(primaryCol);
+    opacity: 1;
+    transition: all 0.3s ease;
+
+    &:hover {
+        opacity: 0.75;
+    }
+}
+
+.show-more-btn {
+    margin-left: 5%;
+
+    @media (min-width: getBreakpoint(medium)) {
+        margin-left: 0;
+    }
+}
+
+
+

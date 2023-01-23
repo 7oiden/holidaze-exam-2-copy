@@ -1,0 +1,62 @@
+.footer {
+    background-color: getColor(footerBg);
+    color: getColor(textLight);
+    
+    &__heading {
+        @extend .base-margin;
+        font-family: $sans-serif-headings;
+        font-size: 1.125rem;
+        color: getColor(headingFooter);
+        margin-bottom: 0.625rem;
+
+        @media (min-width: getBreakpoint(large)) {
+            font-size: 1.25rem;
+        }
+    }
+
+    &__list {
+        @extend .base-margin;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-left: 1rem;
+    }
+
+    &__icon-list {
+        @extend .base-margin;
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-left: -1rem;
+    }
+
+    &__icon {
+        list-style: none;     
+    }
+
+    &__link {
+        color: getColor(textLight);
+
+        @media (min-width: getBreakpoint(large)) {
+            font-size: 1.125rem;
+        }
+    }
+
+    &__link:hover {
+        color: getColor(textLight);
+    }
+
+    &__bottom {
+        background-color: getColor(textDark);
+        color: getColor(subtleGray);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    &__bottom-icon {
+        width: 1rem;
+    }
+}

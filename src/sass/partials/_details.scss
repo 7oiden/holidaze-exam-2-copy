@@ -1,0 +1,84 @@
+.details {
+    &__category {
+        @extend .base-margin;
+        font-family: $serif-headings;
+        font-weight: bold;
+        color: getColor(secondaryCol);
+        font-size: 1.125rem;
+    }
+
+    &__info-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 0 0.75rem;
+    }
+
+    &__column-1 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    &__block-1 {
+        width: 90%;
+        margin: 0 auto;
+        order: 2;
+
+        @media (min-width: getBreakpoint(small)) {
+            width: 100%;
+        }
+
+        @media (min-width: getBreakpoint(large)) {
+            order: 1;
+        }
+    }
+
+    &__block-2 {
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 0.5rem;
+        order: 3;
+        border-top: 1px solid getColor(dividers);
+
+        @media (min-width: getBreakpoint(small)) {
+            width: 100%;
+        }
+     
+        @media (min-width: getBreakpoint(large)) {
+            border: none;
+        }
+    }
+
+    &__column-2 {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;         
+    }
+
+    &__image {
+        @extend .base-margin;
+        width: 100%;
+        order: 1;
+        display: block;
+
+        @media (min-width: getBreakpoint(large)) {
+            border-radius: 0 0 4px 4px;
+        }
+        
+        @media (min-width: getBreakpoint(large)) {
+            border-radius: 4px;
+            order: 2;
+        }
+    }
+
+    &__price {
+        @extend .base-margin;
+        font-weight: bold;
+        font-size: 1.125rem;
+        padding-bottom: 0.25rem;
+    } 
+}

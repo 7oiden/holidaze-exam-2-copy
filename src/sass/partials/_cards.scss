@@ -1,0 +1,246 @@
+.category-card {
+    border-radius: 25px;
+    border: none;
+    max-width: 400px;
+    transition: all 0.3s ease;
+
+    &:hover {
+        opacity: 0.7;
+    }
+
+    @media (min-width: getBreakpoint(xlarge)) {
+        max-width: 400px;
+    }
+
+    &__link {
+        @extend .base-margin;  
+    }
+
+    &__image {
+        border-radius: 4px 4px 0 0;
+    }
+
+    &__body {
+        background-color: getColor(secondaryCol);
+        padding: 1rem;
+        border-radius: 0 0 4px 4px;
+    }
+
+    &__title {
+        @extend .base-margin;
+        text-align: center;
+        font-family: $serif-headings;
+        font-weight: 600;
+        font-size: getSize(catCardTitleSmall);
+        color: getColor(textLight);
+
+        @media (min-width: getBreakpoint(large)) {
+            font-size: getSize(catCardTitleMedium);
+        }
+
+        @media (min-width: getBreakpoint(xlarge)) {
+            font-size: getSize(catCardTitleLarge);
+        }
+    }
+}
+
+.product-card {
+    border-radius: 25px;
+    border: none;
+    transition: 0.3s opacity ease;
+    opacity: 1;
+    background-color: transparent;
+
+    &:hover {
+        opacity: 0.7;
+    }
+    
+    &__image {
+        @extend .base-margin;
+        border-radius: 25px 25px 0 0;        
+    }
+
+    &__body {
+        padding: 0.75rem 1rem 0.5rem 1rem;
+        background-color: getColor(primaryBg);
+        color: getColor(textDark)    
+    }
+
+    &__title {
+        @extend .base-margin;
+        font-family: $sans-serif-headings;
+        font-weight: bold;
+        font-size: getSize(prodCardTitle);
+        color: getColor(textDark);
+        padding-bottom: 0.25rem;
+    }
+
+    &__text-wrapper {
+        display: flex;
+        gap: 0.25rem;
+        color: getColor(secondaryCol);
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+        border-top: 1px solid getColor(dividers)
+    }
+
+    &__text {
+        @extend .base-margin;
+        font-weight: 600;
+        text-align: center;
+        font-weight: bold;
+
+        &--category {
+            margin-top: 0.25rem;
+            font-family: $serif-headings;
+        }
+    }
+
+    &__bottom {
+        font-family: $serif-headings;
+        font-size: getSize(prodCardTitle);
+        font-weight: bold;
+        background-color: getColor(secondaryCol);
+        color: getColor(textLight);
+        text-align: center;
+        border-radius: 0 0 25px 25px;
+        padding: 0.75rem;
+    }
+}
+
+.details-card {
+    background-color: getColor(primaryBg);
+    width: 100%;
+    padding: 2rem 5% 3rem 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @media (min-width: getBreakpoint(small)) {
+        border-radius: 4px;
+    }
+
+    &__heading {
+        font-family: $sans-serif-headings;
+        font-size: 1.125rem;
+        font-weight: bold;
+        padding-bottom: 0.5rem;
+    }
+
+    &__list {
+        @extend .base-margin;
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: auto auto;
+        gap: 0.5rem 1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        max-width: 400px;
+        text-transform: capitalize;
+        list-style: none;
+
+        @media (min-width: getBreakpoint(xlarge)) {
+            grid-template-rows: auto auto;
+            grid-template-columns: auto auto auto;
+            max-width: 100%;
+        }
+
+        @media (min-width: getBreakpoint(xxlarge)) {
+            grid-template-rows: auto auto;
+            grid-template-columns: auto auto auto auto;
+        }
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: getColor(textDark)
+    }
+
+    &__text {
+        @extend .base-margin;
+        color: getColor(textGray)
+    }
+
+    &__map {
+        width: 100%;
+        height: 300px;
+        max-width: 450px;
+        border-radius: 25px;
+        padding-top: 0.5rem;
+    }
+
+    &__block--flex {
+        display: flex;
+        align-items: baseline;
+        gap: 1rem;
+    }
+}
+
+.about__card {
+    width: 100%;
+    margin: 0 auto;
+    background-color: getColor(primaryBg);
+    padding: 1.5rem 5% 5rem 5%;
+    z-index: 100;
+    
+    @media (min-width: getBreakpoint(small)) {
+        border-radius: 0 0 25px 25px;
+        padding: 1.5rem 10% 5rem 10%;
+    }
+
+    @media (min-width: getBreakpoint(medium)) {
+        padding: 1.5rem 7.5% 5rem 7.5%;
+    }
+    
+    @media (min-width: getBreakpoint(large)) {
+        position: absolute;
+        width: 60%;
+        right: 0;
+        top: 25px;
+        flex: 1;
+        border-radius: 0 25px 25px 0;
+    }
+}
+
+.about-card {
+    margin-top: 1rem;
+    height: 80px;
+    max-width: 600px;
+    position: relative;
+
+    &__body {
+        border: 1px solid getColor(dividers);
+        border-radius: 0 25px 25px 0;
+        margin-left: 1rem;
+        padding: 0 1.5rem 5px 2rem;
+        height: 60px;
+        position: absolute;
+        top: 10px;
+        left: 40px;
+        display: flex;
+        align-self: center;
+    }
+
+    &__quote {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    &__quote-text {
+        @extend .base-margin;
+        display: block;
+        font-family: $serif-headings;
+        font-weight: 600;
+        font-size: 1rem;
+        color: getColor(secondaryCol);
+
+        @media (min-width: getBreakpoint(large)) {
+            font-size: 1.125rem;
+        }
+    }
+}
+

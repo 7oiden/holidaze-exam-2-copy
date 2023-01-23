@@ -1,0 +1,295 @@
+em {
+    color: getColor(primaryCol);
+    text-decoration: underline;
+    font-style: normal;
+}
+
+strong {
+    color: getColor(primaryCol)
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @extend .base-margin;
+}
+
+input {
+    font-family: $input-text;
+}
+
+textarea {
+    font-family: $input-text;
+}
+
+.text-link {
+    @extend .base-margin;
+    color: getColor(linkCol);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.hero {
+    &__heading {
+        font-family: $serif-headings;
+        font-weight: 900;
+        color: black;
+        margin-bottom: 1.25rem;    
+    }
+
+    &__sub-heading {
+        font-size: 1.25rem;
+        font-family: $sans-serif-headings;
+        font-weight: 600;
+        color: getColor(secondaryCol);
+        margin-bottom: 2rem;
+        padding: 0.25rem 0;
+
+        @media (min-width: getBreakpoint(large)) {
+            font-size: 1.375rem;
+        }
+    }
+}
+
+.overview__heading,
+.admin__heading,
+.category__heading,
+.support__heading {
+    font-family: $serif-headings;
+    font-weight: 600;
+    font-size: calc(1.325rem + 0.9vw);
+    font-weight: 600;
+    line-height: 1.2;
+
+    @media (min-width: getBreakpoint(large)) {
+        font-size: getSize(mainMaxSize);
+    }
+}
+
+.category__heading {
+    border-bottom: 1px solid getColor(dividers);
+    padding-bottom: 0.5rem;
+}
+
+.admin__heading {
+    padding-left: 5%;
+
+    @media (min-width: getBreakpoint(medium)) {
+        padding-left: 0;
+    }
+}
+
+.support__heading {
+    width: 90%;
+    margin: 0 auto;
+
+    @media (min-width: getBreakpoint(small)) {
+        width: 100%;
+    }
+}
+
+.adm-accordion__heading {
+    color: getColor(textDark);
+    font-family: $sans-serif-headings;
+    font-weight: 600;
+    font-size: getSize(titleSmall);
+    border-radius: 0;
+    
+    @media (min-width: getBreakpoint(medium)) {
+        border-radius: 4px 4px 0 0;
+    }
+    
+    @media (min-width: getBreakpoint(large)) {
+        font-size: getSize(titleLarge);
+    }
+}
+
+.category__sub-heading {
+    font-weight: 400;
+    color: getColor(secondaryCol);
+    padding-top: 0.5rem;
+    
+    @media (min-width: getBreakpoint(large)) {
+        font-size: 1.25rem;
+    }
+}
+
+.support__heading {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid getColor(dividers);
+}
+
+.details__heading {
+    font-family: $sans-serif-headings;
+    font-size: getSize(titleSmall);
+    font-weight: 700;
+    padding-bottom: 0.25rem;
+
+    @media (min-width: getBreakpoint(large)) {
+        font-size: getSize(titleMedium);
+    }
+
+    @media (min-width: getBreakpoint(large)) {
+        font-size: getSize(titleLarge);
+    }
+}
+
+.about__heading {
+    font-family: $sans-serif-headings;
+    font-size: getSize(titleSmall);
+    font-weight: 700;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+
+    @media (min-width: getBreakpoint(large)) {
+        font-size: getSize(titleMedium);
+        margin-top: 1rem;
+    }
+}
+
+.about__text {
+    color: getColor(textGray)
+}
+
+.slogan {
+    font-family: $serif-headings;
+    font-size: calc(1.325rem + 0.9vw);
+    font-weight: 600;
+    line-height: 1.2;
+
+    @media (min-width: getBreakpoint(large)) {
+        font-size: 2rem;
+    }
+}
+
+.about__slogan {
+    position: absolute;
+    max-width: 250px;
+    left: 1.5rem;
+    top: 1rem;
+    color: getColor(primaryCol);
+
+    @media (min-width: getBreakpoint(large)) {
+        left: 2rem;
+        top: 1.5rem;
+    }  
+}
+
+.learn-more__slogan-block {
+    width: 100%;
+    background-color: getColor(semiTransparentBg);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem 3rem;
+    padding: 1rem 5% 1.5rem 5%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.learn-more__slogan {
+    color: getColor(textDark);
+}
+
+.learn-more__quote-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.learn-more__quote {
+    color: getColor(secondaryCol);
+    font-size: 1.25rem;
+    padding-top: 0.25rem;
+    font-family: $sans-serif-headings;
+    font-weight: 600;
+}
+
+.faq__heading {
+    font-family: $sans-serif-headings;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    font-size: 1.5rem;
+
+    @media (min-width: getBreakpoint(small)) {
+            font-size: 1.75rem;
+        }
+
+    @media (min-width: getBreakpoint(large)) {
+            font-size: 2rem;
+        }
+}
+
+.form-heading, .reviews__heading {
+    font-family: $sans-serif-headings;
+    padding-bottom: 1rem;
+    font-weight: 600;
+    font-size: getSize(titleSmall);
+    border-bottom: 1px solid getColor(dividers);
+
+    @media (min-width: getBreakpoint(large)) {
+        font-size: getSize(titleLarge);
+    }
+}
+
+.reviews__heading {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding-top: 1rem;
+    border-bottom: none;
+    border-top: 1px solid getColor(dividers);
+}
+
+.review-form__heading {
+    font-family: $sans-serif-headings;
+    font-size: getSize(reviewFormSmall);
+
+    @media (min-width: getBreakpoint(medium)) {
+        font-size: getSize(reviewFormLarge);
+    }
+}
+
+.modal-title {
+    font-family: $sans-serif-headings;
+    font-weight: 700;
+    font-size: getSize(modalTitleSmall);
+
+    @media (min-width: getBreakpoint(large)) {
+        font-size: getSize(modalTitleLarge);
+    }
+}
+
+.adm__msg-container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.adm__welcome-msg {
+    font-family: $sans-serif-headings;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.adm__support-msg {
+    font-size: 1rem;
+
+    @media (min-width: getBreakpoint(large)) {
+        font-size: 1.125rem;
+    }
+}
+
+.adm__user-name {
+    color: getColor(primaryCol);
+}
+
+.about__text {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+
+
+
+

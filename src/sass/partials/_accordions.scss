@@ -1,0 +1,138 @@
+.accordion {
+    margin-bottom: 1.5rem;
+}
+
+.adm-accordion {
+    &__header {
+        padding: 1.25rem 5%;
+        background-color: getColor(primaryBg);
+        border-bottom: 1px solid getColor(dividers);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.75rem 2rem;
+    }
+
+    &__item-header {
+        width: 100%;
+    }
+    
+    &__title-wrapper {
+        display: flex;
+        gap: 0.5rem;
+    }
+    
+    &__title-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        font-weight: bold;
+        display: inline-block;
+    }
+
+    &__empty-item {
+        background-color: getColor(primaryBg);
+        border-radius: 0 0 4px 4px;
+    }
+
+    &__empty-message {
+        @extend .base-margin;
+        padding: 1rem;
+    }
+
+    &__date {
+        color: getColor(textGray);
+        display: inline-block;
+        padding-right: 10%;
+    }
+
+    &__body-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        position: relative;
+    }
+    
+    &__info-container {
+        @extend .base-margin;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0 0.5rem;
+        margin-right: 3rem;
+    }
+
+    &__msg-container {
+        max-width: 650px;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem 1rem;  
+        margin-right: 1rem;
+    }
+
+    &__label {
+        @extend .base-margin;
+        font-weight: bold;
+        width: 80px;
+
+        @media (min-width: getBreakpoint(large)) {
+            width: 100px;
+        }
+    }
+
+    &__info {
+        @extend .base-margin;
+    }
+
+    &__link {
+        @extend .base-margin;
+        text-decoration: underline;
+        cursor: pointer;
+        color: getColor(linkCol);
+    }
+}
+
+.faq-accordion {
+    &__title {
+        font-size: 1rem;
+
+        @media (min-width: getBreakpoint(large)) {
+                font-size: 1.125rem;
+        }
+    }
+
+    &__text {
+        color: getColor(textGray);
+    }
+
+    &__link {
+        display: inline;
+        font-weight: 600;
+        color: getColor(linkCol)
+    }
+
+    &__list-item {
+        padding-bottom: 0.5rem;
+        font-size: 1rem;
+
+        @media (min-width: getBreakpoint(large)) {
+            font-size: 1.125rem;
+        }
+    }
+}
+
+.accordion-body {
+    border-bottom: 3px solid getColor(dividers);
+}
+
+.accordion-button {
+    background-color: getColor(primaryBg);
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: getColor(hoverCol);
+    }
+}

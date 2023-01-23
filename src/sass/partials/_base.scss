@@ -1,0 +1,81 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;
+    font-family: $body-text;
+    font-size: 1rem;
+    background-color: getColor(secondaryBg);
+     
+    @media (min-width: getBreakpoint(large)) {
+        background-image: url("../../images/background_pattern_grey.jpg");
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+}
+
+header {
+    background-color: getColor(primaryBg);
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+
+#root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sticky-footer-wrapper {
+    flex: 1 0 auto;
+}
+
+.base-margin {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: block;
+}
+
+p {
+    @extend .base-margin;
+}
+
+
+img {
+    @extend .base-margin;
+}
+
+.disabled {
+    pointer-events: none;
+    color: getColor(semiTransparentBg) !important;
+}
+
+.loader-container {
+    padding: 1.5rem;
+}
+
+
+
+
+
+

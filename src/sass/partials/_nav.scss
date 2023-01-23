@@ -1,0 +1,136 @@
+.navbar {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+
+    @media (min-width: getBreakpoint(large)) {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__container {
+        display: flex;
+        gap: 0.5rem;
+        order: 2;
+
+        @media (min-width: getBreakpoint(large)) {
+            gap: 2rem;
+        }
+    }
+
+    &__logo {
+        width: 130px;
+        margin-right: 1.5rem;
+
+        @media (min-width: getBreakpoint(large)) {
+            width: 150px;
+        }
+    }
+
+    &__link {
+        font-family: $navbar-links;
+        font-weight: 400;
+        color: getColor(secondaryBtn);
+        text-decoration: none;
+        display: inline-block;
+        font-size: getSize(buttonSmall);
+        padding-top: 0.25rem;
+        border-bottom: 2px solid transparent;
+
+        @media (min-width: getBreakpoint(large)) {
+        font-size: getSize(buttonLarge);
+            
+        &:hover {
+            color: getColor(textDark);
+        }
+
+        &::after {
+            content: "";
+            display: block;
+            border-bottom: 2px solid getColor(primaryCol);
+            border-radius: 4px;
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+            
+            &:hover::after {
+                transform: scaleX(1);
+            }
+        }    
+    }
+
+    &__link--active {
+        color: getColor(textDark);
+        font-weight: 800;
+    }
+
+    &__icon-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @media (min-width: getBreakpoint(large)) {
+            gap: 2rem;
+        }
+    }
+}
+
+.container-fluid {
+    position: relative;
+    align-items: center;
+}
+
+
+.navbar-brand {
+    margin-left: 4rem;
+    padding: 0;
+
+    @media (min-width: getBreakpoint(large)) {
+        margin-left: 0;
+    }
+}
+
+.admin-nav {
+    background-color: getColor(secondaryCol);
+    font-family: $navbar-links;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+   
+    @media (min-width: getBreakpoint(small)) {
+        flex-direction: row;
+        font-size: 1.125rem;
+    }
+
+    &__link {
+    text-decoration: none;
+    color: getColor(textLight);
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+
+    @media (min-width: getBreakpoint(small)) {
+        padding: 0.75rem 1rem;
+    }
+
+    &:hover {
+            background-color: getColor(adminCol);
+            color: getColor(textLight);
+        }
+    }
+
+    &__link--active {
+        background-color: getColor(adminCol);
+        color: getColor(textLight);
+    }
+}
+
+.navbar-collapse {
+    padding-top: 1rem;
+
+    @media (min-width: getBreakpoint(large)) {
+        padding-top: 0;
+    }
+}
